@@ -1,7 +1,7 @@
 // Service worker ringkas: app sentiasa ambil versi terbaru dari internet,
 // fail simpanan hanya sandaran bila tiada line. Data Firebase tidak disimpan.
 const CACHE = 'naiklrt-v2';
-const FILES = ['./', './index.html', './manifest.json', './firebase-shim.js', './icons/icon-192.png', './icons/icon-512.png'];
+const FILES = ['./', './index.html', './manifest.json', './firebase-shim.js', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
